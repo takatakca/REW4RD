@@ -1,0 +1,35 @@
+{
+  "name": "REW4RDS by TAKATAK",
+  "cloverAppId": "239362NZSVFSC",
+  "developerId": "9KJ25ATT15TTW",
+  "portalStatus": "draft",
+  "webhookEvents": [
+    "O",
+    "P",
+    "A"
+  ],
+  "permissions": "Orders R/W · Payments R/W (tender) · Customers R/W · Merchant R ; Ecommerce pour la vente web",
+  "tiers": [
+    {
+      "name": "Base",
+      "priceCadPerMonth": 50
+    },
+    {
+      "name": "Premium",
+      "priceCadPerMonth": 100
+    },
+    {
+      "name": "VIP",
+      "priceCadPerMonth": 150
+    }
+  ],
+  "envVars": [
+    "CLOVER_APP_ID",
+    "CLOVER_CLIENT_ID",
+    "CLOVER_CLIENT_SECRET",
+    "CLOVER_WEBHOOK_AUTH",
+    "CLOVER_API_BASE",
+    "APP_BASE_URL",
+    "DATABASE_URL"
+  ]
+}
