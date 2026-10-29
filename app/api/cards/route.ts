@@ -12,10 +12,12 @@ export async function GET(req: Request) {
 
 // Issue (sell) a card: { amountCents, phone?, orderId? } → the code, shown ONCE.
 export async function POST(req: Request) {
-  const c = await requireMerchantOrDevice(req);
+  const c = await requireMerchantOrDevice(req, 'base', { action: 'cards.issue' });
   if (!isCtx(c)) return c;
   const b = await readJson(req);
   if (!b) return fail('JSON body required');
-  const r = await issueCard(c.merchantId, Number(b.amountCents), { phone: b.phone, orderId: typeof b.orderId === 'string' ? b.orderId : null, by: String(b.by ?? 'Tableau de bord') });
+  // Who: the signed-in person, or the device plus the cashier's name it sends.
+  const by = c.device && typeof b.by === 'string' && b.by.trim() ? `${b.by.trim().slice(0, 40)} (${c.actor})` : c.actor;
+  const r = await issueCard(c.merchantId, Number(b.amountCents), { phone: b.phone, orderId: typeof b.orderId === 'string' ? b.orderId : null, by });
   return r.ok ? ok({ code: r.code, qr: `REW4RDS:${r.code}`, balanceCents: r.card.balanceCents }) : fail(r.error);
 }

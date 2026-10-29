@@ -9,7 +9,7 @@
     "P",
     "A"
   ],
-  "permissions": "Orders R/W · Payments R/W (tender) · Customers R/W · Merchant R ; Ecommerce pour la vente web",
+  "permissions": "Orders R/W · Payments R/W (tender) · Customers R/W · Merchant R ; Ecommerce pour la vente web · Employees R (rôles des personnes, Compte → Actions autorisées)",
   "tiers": [
     {
       "name": "Base",
