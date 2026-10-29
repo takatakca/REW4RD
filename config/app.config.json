@@ -1,4 +1,5 @@
 {
+  "key": "rew4rd",
   "name": "REW4RDS by TAKATAK",
   "cloverAppId": "239362NZSVFSC",
   "developerId": "9KJ25ATT15TTW",
@@ -8,7 +9,7 @@
     "P",
     "A"
   ],
-  "permissions": "Orders R/W · Payments R/W (tender) · Customers R/W · Merchant R ; Ecommerce pour la vente web",
+  "permissions": "Orders R/W · Payments R/W (tender) · Customers R/W · Merchant R ; Ecommerce pour la vente web · Employees R (rôles des personnes, Compte → Actions autorisées)",
   "tiers": [
     {
       "name": "Base",
@@ -31,5 +32,7 @@
     "CLOVER_API_BASE",
     "APP_BASE_URL",
     "DATABASE_URL"
-  ]
+  ],
+  "summaryFr": "Cartes-cadeaux : vente, activation, échange partiel, recharges et rapport de passif. Loi du Québec : aucune expiration, aucuns frais d’inactivité.",
+  "summaryEn": "Gift cards: sale, activation, partial redemption, reloads and liability report. Québec law: no expiry, no inactivity fees."
 }
