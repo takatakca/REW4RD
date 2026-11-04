@@ -96,4 +96,3 @@ async function balanceProjection(mid: string, ref: string): Promise<{ cards: Arr
   if (owned.length > 100 || owned.some((d) => !/^[0-9A-HJKMNP-TV-Z]{4}$/.test(d.data.last4) || !Number.isSafeInteger(d.data.balanceCents) || d.data.balanceCents < 0)) return null;
   return { cards: owned.map((d) => ({ last4: d.data.last4, balanceCents: d.data.balanceCents })) };
 }
-
